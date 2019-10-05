@@ -38,6 +38,7 @@ To veiw the logs of a container running in a pod:
 
 ```
 kubectl logs <pod-name> -c <container-name>
+```
 
 ## Port Forwarding
 
