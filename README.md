@@ -62,6 +62,18 @@ metadata:
 ...
 ```
 
+To create a label on an existing pod:
+
+```
+kubectl lobel pod <pod-name> <label-key>=<label-value>
+```
+
+To modify a label on an existing pod:
+
+```
+kubectl lobel pod <pod-name> <label-key>=<label-value> --overwrite
+```
+
 To list all labels attached to pods:
 
 ```
@@ -111,3 +123,35 @@ To list pods with labels values **NOT** in a particular list of values:
 ```
 kubectl get pods -l <label-key> notin (<label-value>,<label-value>[,...])
 ```
+
+## Nodes
+
+To create a label on an existing node:
+
+```
+kubectl lobel node <node-name> <label-key>=<label-value>
+```
+
+To list pods with labels with particular values attached:
+
+```
+kubectl get nodes -l <label-key>=<label-value>[,...]
+```
+
+## Annotations
+
+To add an annotation to a pod:
+
+```
+kubectl annotate pod <pod-name>  -l <annotation-key>=<annotation-value>[,...]
+```
+
+To view the annotations on a pod:
+
+```
+kubectl describe pod <pod-name>
+```
+
+## Namespaces
+
+
